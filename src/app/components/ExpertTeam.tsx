@@ -4,7 +4,7 @@ import ExpartCard from './card/ExpartCard';
 
 const ExpertTeam: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [shareIconHoveredIndex, setShareIconHoveredIndex] = useState<number | null>(null); // Track hover state for each share icon
+    const [shareIconHoveredIndex, setShareIconHoveredIndex] = useState<number | null>(null); 
     const [itemsToShow, setItemsToShow] = useState(3);
     const banners = [
         {
@@ -32,25 +32,19 @@ const ExpertTeam: React.FC = () => {
             description: "Wellness Coach",
         },
     ];
-
-   // Items to display in one slide
     const itemsCount = banners.length;
-
     const [currentIndex, setCurrentIndex] = useState(0);
-
     const updateItemsToShow = () => {
         const screenWidth = window.innerWidth;
         if (screenWidth < 640) {
-            setItemsToShow(1);  // Small screen (mobile) - show 1 card
+            setItemsToShow(1);  
         } else if (screenWidth >= 640 && screenWidth < 1024) {
-            setItemsToShow(2);  // Medium screen (tablet) - show 2 cards
+            setItemsToShow(2);  
         } else {
-            setItemsToShow(3);  // Large screen (desktop) - show 3 cards
+            setItemsToShow(3); 
         }
     };
-
     useEffect(() => {
-        // Update itemsToShow on mount and when the window is resized
         updateItemsToShow();
         window.addEventListener('resize', updateItemsToShow);
         return () => {
@@ -58,13 +52,18 @@ const ExpertTeam: React.FC = () => {
         };
     }, []);
 
-    // Handles the next slide logic
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % (itemsCount - itemsToShow + 1));
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex, itemsToShow, itemsCount]);
     const handleNext = () => {
         if (currentIndex < itemsCount - itemsToShow) {
             setCurrentIndex((prevIndex) => prevIndex + 1);
         }
     };
-
     const handlePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
@@ -81,9 +80,8 @@ const ExpertTeam: React.FC = () => {
                     {banners.map((banner, index) => (
                         <div
                             key={index}
-                            className={`flex-shrink-0 mr-0 md:mr-6 ${
-                                itemsToShow === 1 ? 'w-[100%]' : itemsToShow === 2 ? 'w-[50%]' : 'w-[31.8%]'
-                            }`}
+                            className={`flex-shrink-0 mr-0 md:mr-6 ${itemsToShow === 1 ? 'w-[100%]' : itemsToShow === 2 ? 'w-[50%]' : 'w-[31.8%]'
+                                }`}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >

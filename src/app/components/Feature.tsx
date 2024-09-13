@@ -70,8 +70,8 @@ const Feature: React.FC = () => {
                 >                
                 </button>
                 <button
-                    onClick={handleNext}
-                    className="border-2 border-primary p-[4px] rounded-full hover:bg-[#E67529] text-[#E67529]"
+                    
+                    className="border-2 border-primary p-[4px] rounded-full bg-[#E67529] text-[#E67529]"
                 >
                 </button>
                 <button

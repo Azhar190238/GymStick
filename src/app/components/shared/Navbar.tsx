@@ -8,7 +8,7 @@ import { Dropdown, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { IoMdCloseCircle } from 'react-icons/io';
 const links = [
-  { name: 'Home', dropdownItems: [{ name: 'Home 1', href: '/home1' }, { name: 'Home 2', href: '/home2' }] },
+  { name: 'Home', dropdownItems: [{ name: 'Home 1', href: '/home' }, { name: 'Home 2', href: '/home2' },  { name: 'Home 3', href: '/home3' }] },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
   { name: 'Shop', path: '/shop' },
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
               onClick={(e) => e.preventDefault()}
               className={`flex items-center space-x-1 ${activeLink === link.name ? 'text-[#E67529]' : 'text-white'}`}
             >
-              <Space>{link.name}<DownOutlined /></Space>
+              <Space>{link.name}<DownOutlined className='text-lg' /></Space>
             </a>
           </Dropdown>
         ) : (
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
     <nav className="relative  z-10 pt-8 dark:bg-[#2B2B2B] ">
       <div className="max-w-[1320px] mx-auto px-4 pb-8 flex items-center justify-between">
         <a href="/" className="lg:mr-80">
-          <Image src="/images/Logo.png" height={77} width={218} alt="logoImage" className='w-56 h-12' />
+          <Image src="/images/Logo.png" height={47} width={298} alt="logoImage" className='w-56 h-12' />
         </a>
 
         <div className="lg:hidden relative left-10">
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className='h-[1px] w-full relative bottom-[10px] bg-[#D9D9D933] '></div>
+      <div className='h-[1px] w-full relative bottom-[11px] bg-[#D9D9D933] '></div>
       {isOpen && (
         <div className="lg:hidden absolute top-28 left-0 w-full  z-50 flex flex-col text-[18px] font-medium px-4 space-y-4 text-white">
           {renderLinks(true)}

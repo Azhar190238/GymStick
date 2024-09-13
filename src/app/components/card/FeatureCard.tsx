@@ -16,10 +16,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ image, title, description }) 
           <div className=' flex items-center justify-center p-3'>
             <Image
               src={`/images/features/${image}`}
-              width={50}  // Set the image width explicitly
-              height={50} // Set the image height explicitly
+              width={50}  
+              height={50} 
               alt={title}
-              className='object-cover' // This will make the image respect the container size
+              className='object-cover'
             />
           </div>
         </div>

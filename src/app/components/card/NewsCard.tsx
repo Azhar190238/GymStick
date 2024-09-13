@@ -30,13 +30,13 @@ const NewsCard: React.FC<newsCardProps>  = ({heading}) => {
               <div className="flex justify-between">
                 <div className="flex gap-[8px] items-center  text-secondary duration-300 transition-all text-[16px]">
                   <FaUserTie />
-                  <span className="font-normal font-[Poppins] text-[14px]">
+                  <span className="font-normal  text-[14px]">
                     admin
                   </span>
                 </div>
                 <div className="flex gap-[8px] items-center  text-secondary duration-300 transition-all text-[16px]">
                   <BsFillCalendarFill />
-                  <span className="font-normal font-[Poppins] text-[14px] ">
+                  <span className="font-normal  text-[14px] ">
                     03 sep, 2024
                   </span>
                 </div>

@@ -13,6 +13,7 @@ const Testimonial = () => {
     ];
     const [itemsToShow, setItemsToShow] = useState(2); 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const itemsCount = allReviews.length;
     const updateItemsToShow = () => {
         const screenWidth = window.innerWidth;
         if (screenWidth < 640) {
@@ -28,6 +29,16 @@ const Testimonial = () => {
             window.removeEventListener('resize', updateItemsToShow);
         };
     }, []);
+    
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % (itemsCount - itemsToShow + 1));
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex, itemsToShow, itemsCount]);
+
     const handleNext = () => {
         if (currentIndex < allReviews.length - 1) {
             setCurrentIndex(prevIndex => prevIndex + 1);
