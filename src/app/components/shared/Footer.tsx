@@ -4,8 +4,8 @@ import { FaFacebook, FaLinkedin, FaPhoneAlt, FaEnvelope, FaYoutube } from 'react
 const Footer: React.FC = () => {
     return (
         <footer className=" py-10 mt-40 ">
-            <div className="max-w-[1320px] mx-auto text-[#534C4C] font-poppins">
-                <div className='flex gap-40'>
+            <div className="max-w-[1320px] px-8 md:px-0 mx-auto text-[#534C4C] font-poppins">
+                <div className='flex flex-col md:flex-row gap-40'>
                     <div className='w-[33%]'>
                         <div className="flex items-center">
                             <Image src='/images/Logo.png' alt='logo' height={47} width={218}></Image>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                             className="border-[#D9D9D9] py-5 border-b-2 w-full text-gray-900 focus:outline-none"
                         />
                         <div className='mx-auto text-center mt-6 '>
-                            <button className="mx-auto rounded bg-[#E67529] text-[18px] font-medium text-white px-8 py-4">
+                            <button className="mx-auto rounded bg-[#E67529] text-[18px]  duration-300  hover:scale-105 font-medium text-white px-8 py-4">
                                 Subscribe
                             </button>
                         </div>

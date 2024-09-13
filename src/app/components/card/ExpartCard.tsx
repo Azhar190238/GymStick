@@ -59,7 +59,7 @@ const ExpartCard: React.FC<ExpartCardProps> = ({
         <div className="relative flex items-center justify-center rounded-lg">
           {shareIconHoveredIndex !== index ? (
             <div
-              className="absolute left-[60px] bottom-48 bg-[#333333] rotate-180 rounded-full text-white text-2xl p-5 cursor-pointer"
+              className="absolute left-[60px] bottom-[170px] bg-[#333333] rotate-180 rounded-full text-white text-2xl p-5 cursor-pointer"
               onMouseEnter={() => setShareIconHoveredIndex(index)}
               onMouseLeave={() => setShareIconHoveredIndex(null)}
             >

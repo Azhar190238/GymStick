@@ -13,7 +13,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#E67529",    
-        secondary: "var(--secondary)",  // Ensure to define secondary color as well
+        secondary: "#2B2B2B",  // Ensure to define secondary color as well
       },
       boxShadow: {
         'custom-light': '0px 0px 20px 0px rgba(0, 0, 0, 0.10)',

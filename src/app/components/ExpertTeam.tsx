@@ -1,11 +1,11 @@
-'use client'
-import React, { useState } from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 import ExpartCard from './card/ExpartCard';
 
 const ExpertTeam: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [shareIconHoveredIndex, setShareIconHoveredIndex] = useState<number | null>(null); // Track hover state for each share icon
-
+    const [itemsToShow, setItemsToShow] = useState(3);
     const banners = [
         {
             title: "Alan Bagham",
@@ -33,10 +33,30 @@ const ExpertTeam: React.FC = () => {
         },
     ];
 
-    const itemsToShow = 3;  // Items to display in one slide
+   // Items to display in one slide
     const itemsCount = banners.length;
 
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const updateItemsToShow = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 640) {
+            setItemsToShow(1);  // Small screen (mobile) - show 1 card
+        } else if (screenWidth >= 640 && screenWidth < 1024) {
+            setItemsToShow(2);  // Medium screen (tablet) - show 2 cards
+        } else {
+            setItemsToShow(3);  // Large screen (desktop) - show 3 cards
+        }
+    };
+
+    useEffect(() => {
+        // Update itemsToShow on mount and when the window is resized
+        updateItemsToShow();
+        window.addEventListener('resize', updateItemsToShow);
+        return () => {
+            window.removeEventListener('resize', updateItemsToShow);
+        };
+    }, []);
 
     // Handles the next slide logic
     const handleNext = () => {
@@ -45,7 +65,6 @@ const ExpertTeam: React.FC = () => {
         }
     };
 
-    // Handles the previous slide logic
     const handlePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex((prevIndex) => prevIndex - 1);
@@ -53,7 +72,7 @@ const ExpertTeam: React.FC = () => {
     };
 
     return (
-        <div className='max-w-[1320px] mx-auto my-20 relative'>
+        <div className='max-w-[1320px] px-8 md:px-0 mx-auto my-20 relative'>
             <div className="overflow-hidden">
                 <div
                     className="flex transition-transform duration-300"
@@ -62,7 +81,9 @@ const ExpertTeam: React.FC = () => {
                     {banners.map((banner, index) => (
                         <div
                             key={index}
-                            className="w-[31.8%] flex-shrink-0 mr-6 " // Ensure no unwanted margins or paddings
+                            className={`flex-shrink-0 mr-0 md:mr-6 ${
+                                itemsToShow === 1 ? 'w-[100%]' : itemsToShow === 2 ? 'w-[50%]' : 'w-[31.8%]'
+                            }`}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
@@ -93,23 +114,6 @@ const ExpertTeam: React.FC = () => {
                     ❯
                 </button>
             </div>
-
-            {/* <div className="flex justify-center gap-4 p-5">
-                <button
-                    onClick={handlePrev}
-                    className="bg-transparent border-2 border-[#FF3811] px-5 py-3 text-[#FF3811] rounded-full p-2 flex justify-center items-center transition-transform duration-300 hover:scale-110"
-                    // disabled={currentIndex === 0}
-                >
-                    ❮
-                </button>
-                <button
-                    onClick={handleNext}
-                    className="bg-[#FF3811] text-white rounded-full px-5 py-3 flex justify-center items-center transition-transform duration-300 hover:scale-110"
-                    // disabled={currentIndex >= itemsCount - itemsToShow}
-                >
-                    ❯
-                </button>
-            </div> */}
         </div>
     );
 };
