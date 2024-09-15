@@ -65,7 +65,7 @@ const About = () => {
     };
 
     return (
-        <div className="w-full mx-auto max-w-[1320px] overflow-hidden my-40">
+        <div className="w-full mx-auto max-w-[1320px] overflow-hidden pt-20 my-40">
             <div
                 className="flex transition-transform duration-700"
                 style={{

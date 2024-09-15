@@ -16,8 +16,8 @@ const BMI: React.FC = () => {
     return (
         <section className='max-w-[1320px] mx-auto my-10'>
             <div className="flex lg:flex-row flex-col lg:gap-[136px] items-center">
-                <div className="lg:basis-1/2 basis-full border border-[#D9D9D9] p-[24px]">
-                    <h4 className="text-[28px] font-bold py-10 pr-6 font-montserrat">BMI Chart</h4>
+                <div className="lg:basis-1/2 basis-full border border-[#D9D9D9]  px-6 pb-12">
+                    <h4 className="text-[28px] font-bold  py-10 pr-6 font-montserrat">BMI Chart</h4>
                     <table className="border border-[#D9D9D9] w-full rounded">
                         <thead>
                             <tr className="rounded flex font-bold border-b border-[#D9D9D9] font-montserrat">

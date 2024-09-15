@@ -87,4 +87,36 @@ line-height: 160%;
 .button:hover {
   transform: scale(1.05)
 }
+/* Style for the custom toggle switch */
+.toggle {
+  appearance: none;
+  width: 72px; /* Adjust the width of the switch */
+  height: 40px; /* Adjust the height of the switch */
+  background-color: #E6E6E6; /* Background color when unchecked */
+  border-radius: 20px; /* Rounded edges */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
 
+.toggle::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 28px; /* Width of the handle */
+  height: 28px; /* Height of the handle */
+  background-color: #E67529; /* Color of the handle */
+  border-radius: 50%; /* Round handle */
+  transition: transform 0.3s;
+
+}
+
+.toggle:checked {
+  background-color: primary; /* Background color when checked */
+}
+
+.toggle:checked::before {
+  transform: translateX(26px); /* Move handle when checked */
+}

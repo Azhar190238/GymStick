@@ -13,7 +13,7 @@ const links = [
   { name: 'Services', path: '/services' },
   { name: 'Shop', path: '/shop' },
   { name: 'Blogs', path: '/blogs' },
-  { name: 'More', dropdownItems: [{ name: 'More 1', href: '/home1' }, { name: 'More 2', href: '/home2' }] },
+  { name: 'More', dropdownItems: [{ name: 'More 1', href: '/more1' }, { name: 'More 2', href: '/more2' }] },
 ];
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState('Home');

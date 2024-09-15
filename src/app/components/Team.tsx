@@ -58,7 +58,7 @@ const Team: React.FC = () => {
             <div className="relative">
                 <div className="overflow-hidden">
                     <div
-                        className="flex transition-transform duration-300"
+                        className="flex transition-transform duration-700"
                         style={{
                             transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`,
                         }}
