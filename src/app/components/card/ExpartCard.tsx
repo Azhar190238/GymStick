@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 import { FaFacebook, FaLinkedin, FaShareAlt, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from 'react-icons/fa6';
-import { GoArrowRight } from 'react-icons/go';
 
 interface ExpartCardProps {
   title: string;
@@ -52,14 +51,11 @@ const ExpartCard: React.FC<ExpartCardProps> = ({
               {description}
             </p>
           </div>
-          <button className="text-2xl rounded-lg">
-            <GoArrowRight />
-          </button>
         </div>
         <div className="relative flex items-center justify-center rounded-lg">
           {shareIconHoveredIndex !== index ? (
             <div
-              className="absolute left-[60px] bottom-[170px] bg-[#333333] rotate-180 rounded-full text-white text-2xl p-5 cursor-pointer"
+              className="absolute left-[60px] bottom-[180px] bg-[#333333] rotate-180 rounded-full text-white text-2xl p-5 cursor-pointer"
               onMouseEnter={() => setShareIconHoveredIndex(index)}
               onMouseLeave={() => setShareIconHoveredIndex(null)}
             >

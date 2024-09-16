@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { WiDayThunderstorm } from 'react-icons/wi';
+// import { WiDayThunderstorm } from 'react-icons/wi';
 
 interface PricingCardProps {
     name: string;
@@ -9,7 +9,7 @@ interface PricingCardProps {
     plan: string[];
 }
 
-const PricingCard: React.FC<PricingCardProps> = ({ name, price, deadLine, plan }) => {
+const PricingCard: React.FC<PricingCardProps> = ({ name, price,  plan }) => {
     return (
         <section className='hover:scale-105 transition-all duration-500 group  shadow-custom-light'>
             <div>

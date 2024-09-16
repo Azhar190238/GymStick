@@ -23,6 +23,7 @@ const serviceData = [
     { image: GrYoga, title: "Yoga", description: "Information on personalized nutrition plans and counseling sessions.", button: 'Read More', icon: GoArrowRight },
     { image: TbSwimming, title: "Swimming", description: "Information on personalized nutrition plans and counseling sessions.", button: 'Read More', icon: GoArrowRight },
     { image: FaPersonRunning, title: "Running", description: "Information on personalized nutrition plans and counseling sessions.", button: 'Read More', icon: GoArrowRight }
+    
 ];
 const Services: React.FC = () => {
     const [allServices, setAllServices] = useState(false);

@@ -18,7 +18,7 @@ const Pricing: React.FC = () => {
     return (
         <section className='max-w-[1320px] mx-auto my-10'>
             <BasicComponent subHeading='Pricing' heading='Choose the Best Plans' />
-            <div className="flex justify-end gap-4 mb-4">
+            <div className="flex justify-end gap-4 relative bottom-14">
                 <label className="flex cursor-pointer items-center gap-2">
                     <span 
                         className={`text-xl font-bold ${activeTab === 'monthly' ? 'text-primary' : 'text-black'}`}

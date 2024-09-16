@@ -1,24 +1,37 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Dropdown, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { IoMdCloseCircle } from 'react-icons/io';
+
 const links = [
-  { name: 'Home', dropdownItems: [{ name: 'Home 1', href: '/home' }, { name: 'Home 2', href: '/home2' },  { name: 'Home 3', href: '/home3' }] },
+  { name: 'Home', dropdownItems: [{ name: 'Home 1', href: '/' }, { name: 'Home 2', href: '/home2' }, { name: 'Home 3', href: '/home3' }] },
   { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
+  { name: 'Service', path: '/service' },
   { name: 'Shop', path: '/shop' },
   { name: 'Blogs', path: '/blogs' },
-  { name: 'More', dropdownItems: [{ name: 'More 1', href: '/more1' }, { name: 'More 2', href: '/more2' }] },
+  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'More 2', href: '/more2' }] },
 ];
+
 const Navbar: React.FC = () => {
-  const [activeLink, setActiveLink] = useState('Home');
+  const [activeLink, setActiveLink] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+
+  // Set active link based on current route
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    // Find the link whose path matches the current path
+    const activeItem = links.find(link => link.path === currentPath || (link.dropdownItems && link.dropdownItems.some(item => item.href === currentPath)));
+    if (activeItem) {
+      setActiveLink(activeItem.name); // Set the active link to the matched route
+    }
+  }, [router]);
+
   const handleLinkClick = (linkName: string, path?: string) => {
     setActiveLink(linkName);
     setIsOpen(false);
@@ -56,7 +69,7 @@ const Navbar: React.FC = () => {
     ));
 
   return (
-    <nav className="relative  z-10 pt-8 dark:bg-[#2B2B2B] ">
+    <nav className="relative z-10 pt-8 dark:bg-[#2B2B2B]">
       <div className="max-w-[1320px] mx-auto px-4 pb-8 flex items-center justify-between">
         <a href="/" className="lg:mr-80">
           <Image src="/images/Logo.png" height={47} width={298} alt="logoImage" className='w-56 h-12' />
@@ -68,7 +81,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex items-center  text-[18px] font-medium text-white space-x-10">
+        <div className="hidden lg:flex items-center text-[18px] font-medium text-white space-x-10">
           {renderLinks()}
         </div>
         <div className="ml-16">
@@ -77,13 +90,12 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className='h-[1px] w-full relative bottom-[11px] bg-[#D9D9D933] '></div>
+      <div className='h-[1px] w-full relative bottom-[11px] bg-[#D9D9D933]'></div>
       {isOpen && (
-        <div className="lg:hidden absolute top-28 left-0 w-full  z-50 flex flex-col text-[18px] font-medium px-4 space-y-4 text-white">
+        <div className="lg:hidden absolute top-28 left-0 w-full z-50 flex flex-col text-[18px] font-medium px-4 space-y-4 text-white">
           {renderLinks(true)}
         </div>
       )}
-
     </nav>
   );
 };
