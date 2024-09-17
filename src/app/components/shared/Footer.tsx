@@ -8,8 +8,9 @@ const Footer: React.FC = () => {
     return (
         <footer className=" py-10 mt-40 ">
             <div className="max-w-[1320px] px-8 md:px-0 mx-auto text-[#534C4C] font-poppins">
-                <div className='flex flex-col md:flex-row gap-40'>
-                    <div className='w-[33%]'>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20'>
+                    <div className='w-full'>
                         <div className="flex items-center">
                             <Image src='/images/Logo.png' alt='logo' height={47} width={218}></Image>
                         </div>
@@ -32,7 +33,7 @@ const Footer: React.FC = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="w-full grid grid-cols-2 md:grid-cols-3 ">
+                    
                         <div>
                             <h3 className="text-[16px] font-bold flex items-center gap-2">
                                 <p className='w-3 h-3 rounded-full bg-[#E67529]'></p>
@@ -76,9 +77,11 @@ const Footer: React.FC = () => {
                                </div>
                             </ul>
                         </div>
-                    </div>
+                  
                 </div>
-                <div className='mx-auto w-[60%] mt-10'>
+
+
+                <div className='mx-auto w-full md:w-[60%] mt-10'>
                     <form className="mt-4 sm:w-full">
                         <input
                             type="email"
@@ -94,7 +97,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="mt-12 pt-5 border-t border-[#D9D9D9] text-center">
-                <p className="text-[#534C4C] font-bold text-[16px]">
+                <p className="text-[#534C4C] font-bold text-[14px] md:text-[16px]">
                     CopyRights{new Date().getFullYear()} All rights reserved.<span className='text-primary'>GymStick</span>
                 </p>
             </div>

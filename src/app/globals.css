@@ -152,7 +152,10 @@ line-height: 160%;
 
 :where(.css-dev-only-do-not-override-qnu6hi).ant-collapse {
   border:none;
+ 
 }
 :where(.css-dev-only-do-not-override-qnu6hi).ant-collapse .ant-collapse-content {
   border-top:none;
+
+
 }

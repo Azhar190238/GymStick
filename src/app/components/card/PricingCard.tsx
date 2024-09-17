@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-// import { WiDayThunderstorm } from 'react-icons/wi';
-
 interface PricingCardProps {
     name: string;
     price: number;
