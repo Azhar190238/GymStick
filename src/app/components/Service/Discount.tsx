@@ -5,7 +5,7 @@ const Discount: React.FC = () => {
     return (
         <div
             className='relative w-full bg-cover bg-center'
-            style={{ backgroundImage: 'url(/images/discount/1.png)', minHeight: '80vh' }}
+            style={{ backgroundImage: 'url(/images/discount/1.png)', minHeight: '60vh' }}
         >
             <div className="absolute top-0 left-0 h-full w-full bg-primary opacity-90"></div>
             <div className="relative max-w-[1320px] mx-auto flex flex-col lg:flex-row gap-28 h-full px-6 py-10 lg:py-0 lg:px-0">
@@ -33,7 +33,7 @@ const Discount: React.FC = () => {
                     <h1 className='text-white font-semibold font-montserrat text-[50px] lg:text-[100px] capitalize'>
                         30% off
                     </h1>
-                    <div className='max-w-[413px] bg-white rounded capitalize'>
+                    <div className='max-w-[408px] bg-white rounded capitalize'>
                         <p className='px-[26px] py-[13px] text-primary font-semibold text-lg lg:text-xl'>
                             when registering for the first time
                         </p>

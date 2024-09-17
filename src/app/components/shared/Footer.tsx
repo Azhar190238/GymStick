@@ -52,11 +52,11 @@ const Footer: React.FC = () => {
                                 <p>Support</p>
                             </h3>
                             <ul className="mt-7 space-y-4">
-                                <li><a href="#" className="">Contact Us
+                                <li><a href="/contact" className="">Contact Us
                                     
                                     
                                 </a></li>
-                                <li><a href="#" className="">FAQS</a></li>
+                                <li><a href="/faq" className="">FAQS</a></li>
                                 <li><a href="#" className="">Privacy Policy</a></li>
                                 <li><a href="#" className="">Terms & Condition</a></li>
                             </ul>

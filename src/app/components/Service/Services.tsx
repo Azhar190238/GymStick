@@ -66,8 +66,8 @@ const Services: React.FC = () => {
                             </div>
                             <h4 className='text-center service-heading group-hover:text-white text-[#2B2B2B] text-[18px] font-bold'>{service.title}</h4>
                             <p className='text-center max-w-[296px] mx-auto mt-4 para-1 service-description group-hover:text-white'>{service.description}</p>
-                            <div className='my-8 flex gap-2 items-center justify-center'>
-                                <p className='text-center service-description group-hover:text-white'>{service.button}</p>
+                            <div className='mt-8 pb-8 flex space-x-2 items-center justify-center'>
+                                <p className='text-center service-description group-hover:text-white '>{service.button}</p>
                                 <service.iconRight className='text-xl group-hover:text-white' />
                             </div>
                         </div>

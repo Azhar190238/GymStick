@@ -13,7 +13,7 @@ const BasicHeader: React.FC<BasicHeaderProps> = ({ heading, subHeading }) => {
             className="relative w-full -top-32 h-[420px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[420px] overflow-hidden bg-cover bg-center "
             style={{ backgroundImage: 'url(/images/About/image.png)' }}
         >
-            <div className='border-x-[2px] border-[#FF4E25] max-w-[1290px] mx-auto h-[420px] '>             
+            <div className='border-x-[2px] border-[#FF4E25] border-opacity-40 max-w-[1290px] mx-auto h-[420px] '>             
                 <div className="absolute inset-0 bg-black bg-opacity-80"/> 
                 <div className="relative font-montserrat text-white text-5xl max-w-[1320px] mx-auto pl-6 pt-[219px]">
                     <h2 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold">{heading}</h2>

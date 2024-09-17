@@ -75,17 +75,19 @@ line-height: 160%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.25rem;
-  background-color: #E67529;
+  border: 1px solid #E67529;
   font-size: 18px;
   transition: transform 0.3s;
   font-weight: 500;
-  color: white;
+  color: #2B2B2B;
   padding: 1rem 2rem;
   text-transform: capitalize;
 }
 
 .button:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
+  background-color: #E67529;
+  color: #fff;
 }
 .toggle {
   appearance: none;
@@ -146,4 +148,11 @@ line-height: 160%;
 
 .ant-pagination .ant-pagination-item-active a:hover {
   color: #FFFFFF;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-collapse {
+  border:none;
+}
+:where(.css-dev-only-do-not-override-qnu6hi).ant-collapse .ant-collapse-content {
+  border-top:none;
 }

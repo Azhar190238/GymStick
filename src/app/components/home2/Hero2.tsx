@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 
 const Hero2: React.FC = () => {
-    // Array containing image paths and headings
     const features = [
         { imgSrc: '/images/Home2/1.png', heading: 'Scheduling' },
         { imgSrc: '/images/Home2/2.png', heading: 'Coaching' },
@@ -10,7 +9,6 @@ const Hero2: React.FC = () => {
         { imgSrc: '/images/Home2/4.png', heading: 'Tracking' },
         { imgSrc: '/images/Home2/5.png', heading: 'Community' },
     ];
-
     return (
         <div
             className=" relative -top-32 bg-cover bg-center bg-no-repeat h-full md:h-[135vh]"
@@ -26,12 +24,10 @@ const Hero2: React.FC = () => {
                             <h2 className='text-white text-4xl md:text-[84px]'>stronger</h2>
                             <h3 className='text-white text-3xl md:text-7xl pt-12 pl-36'>every day</h3>
                         </div>
-
                         <p className=' text-white text-2xl font-medium leading-[160%]'>At Fitness Queen Gym, we help women achieve their <br />
                             fitness goals with support and motivation</p>
                         <div className=''>
-                            <button className="button mt-12 "> Start Your Journey</button>
-
+                            <button className="button mt-12 text-white"> Start Your Journey</button>
                         </div>
                     </div>
                     <div className=''>
@@ -52,5 +48,4 @@ const Hero2: React.FC = () => {
         </div>
     );
 };
-
 export default Hero2;
