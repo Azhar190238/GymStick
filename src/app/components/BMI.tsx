@@ -38,7 +38,9 @@ const BMI: React.FC = () => {
                                 </tr>
                             ))}
                         </tbody>
+                       
                     </table>
+                    <h1 className='text-[16px] mt-10 text-secondary '> <span className='text-primary font-semibold'>BMR</span> metabolic rate / <span className='text-primary font-semibold'>BMI</span> body mass index</h1>
                 </div>
                 <div className="lg:basis-1/2 basis-full my-10">
                     <SectionHeading subHeading='body mass index' heading='calculate your BMI' />

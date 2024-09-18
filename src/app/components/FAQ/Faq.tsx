@@ -116,7 +116,7 @@ const Faq: React.FC = () => {
         </div>
 
         {/* FAQ Content */}
-        <div className='col-span-2 h-fit border border-red-500'>
+        <div className='col-span-2 h-fit '>
           
             <Collapse
               accordion

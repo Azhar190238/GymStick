@@ -155,7 +155,13 @@ line-height: 160%;
  
 }
 :where(.css-dev-only-do-not-override-qnu6hi).ant-collapse .ant-collapse-content {
-  border-top:none;
+  border-top: none;
 
 
+
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:hover {
+ border-color: none;
+ box-shadow: none;
 }

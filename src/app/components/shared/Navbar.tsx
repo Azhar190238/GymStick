@@ -13,8 +13,8 @@ const links = [
   { name: 'About', path: '/about' },
   { name: 'Service', path: '/service' },
   { name: 'Shop', path: '/shop' },
-  { name: 'Blogs', path: '/blogs' },
-  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'FAQ', href: '/faq' }, { name: 'Price Plan', href: '/allprice' }] },
+  { name: 'Blogs', path: '/blog' },
+  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'FAQ', href: '/faq' }, { name: 'Price Plan', href: '/allprice' } , { name: 'BMI', href: '/bmi' } , { name: 'Trainer', href: '/trainer' }] },
 ];
 
 const Navbar: React.FC = () => {
@@ -44,11 +44,11 @@ const Navbar: React.FC = () => {
       <div key={index}>
         {link.dropdownItems ? (
           <Dropdown
-            menu={{ items: link.dropdownItems.map(({ name, href }) => ({ label: <a href={href}>{name}</a>, key: name })) }}
+            menu={{ items: link.dropdownItems.map(({ name, href }) => ({ label: <a className='shadow-custom-light' href={href}>{name}</a>, key: name })) }}
           >
             <a
               onClick={(e) => e.preventDefault()}
-              className={`flex items-center space-x-1 ${activeLink === link.name ? 'text-[#E67529]' : 'text-white'}`}
+              className={`flex  items-center space-x-1 ${activeLink === link.name ? 'text-[#E67529]' : 'text-white'}`}
             >
               <Space>{link.name}<DownOutlined className='text-lg' /></Space>
             </a>

@@ -3,6 +3,7 @@ import React from 'react';
 import { FaUserTie } from 'react-icons/fa';
 import { BsFillCalendarFill } from 'react-icons/bs';
 import { LiaLongArrowAltRightSolid } from 'react-icons/lia';
+import Link from 'next/link';
 
 interface newsCardProps {
   heading: string;
@@ -28,7 +29,7 @@ const NewsCard: React.FC<newsCardProps> = ({ heading }) => {
           {heading}
         </h5>
         <div className="flex justify-between">
-          <div className="flex gap-2 items-center  text-secondary duration-300 transition-all text-[16px]">
+          <div className="flex gap-1 md:gap-2 items-center  text-secondary duration-300 transition-all text-[16px]">
             <FaUserTie />
             <span className="font-normal  text-[14px]">
               admin
@@ -40,10 +41,12 @@ const NewsCard: React.FC<newsCardProps> = ({ heading }) => {
               03 sep, 2024
             </span>
           </div>
-          <button className="flex gap-2 items-center group-hover:text-primary text-secondary duration-300 transition-all text-[16px] cursor-pointer">
+          <Link href='/blogdetails'>
+          <button className="flex gap-2 items-center group-hover:text-primary text-secondary duration-300 transition-all text-[14px] md:text-[16px] cursor-pointer">
             <span>Read More</span>
-            <LiaLongArrowAltRightSolid className="text-xl" />
+             <LiaLongArrowAltRightSolid className="text-xl" /> 
           </button>
+          </Link>
         </div>
       </div>
     </div>
