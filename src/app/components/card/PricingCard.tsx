@@ -7,7 +7,7 @@ interface PricingCardProps {
     plan: string[];
 }
 
-const PricingCard: React.FC<PricingCardProps> = ({ name, price,  plan }) => {
+const PricingCard: React.FC<PricingCardProps> = ({ name, price,  plan, deadLine }) => {
     return (
         <section className='hover:scale-105 transition-all duration-500 group  shadow-custom-light'>
             <div>
@@ -15,7 +15,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ name, price,  plan }) => {
             </div>
             <div className='p-6'>
                 <div className=' font-montserrat text-[32px] font-bold text-secondary group-hover:text-primary capitalize '>{name} </div>
-                <p className='font-bold font-montserrat text-secondary group-hover:text-primary text-[32px]'>${price}</p>
+                <p className='font-bold font-montserrat text-secondary group-hover:text-primary text-[32px]'>${price} / {deadLine}</p>
                 <div className='py-5 '>
                     <ul className='text-[20px] font-normal capitalize list-none pl-4'>
                         {plan.map((item, index) => (

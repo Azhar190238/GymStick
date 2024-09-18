@@ -14,21 +14,18 @@ const links = [
   { name: 'Service', path: '/service' },
   { name: 'Shop', path: '/shop' },
   { name: 'Blogs', path: '/blogs' },
-  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'More 2', href: '/more2' }] },
+  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'FAQ', href: '/faq' }, { name: 'Price Plan', href: '/allprice' }] },
 ];
 
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
-  // Set active link based on current route
   useEffect(() => {
     const currentPath = window.location.pathname;
-    // Find the link whose path matches the current path
     const activeItem = links.find(link => link.path === currentPath || (link.dropdownItems && link.dropdownItems.some(item => item.href === currentPath)));
     if (activeItem) {
-      setActiveLink(activeItem.name); // Set the active link to the matched route
+      setActiveLink(activeItem.name); 
     }
   }, [router]);
 
