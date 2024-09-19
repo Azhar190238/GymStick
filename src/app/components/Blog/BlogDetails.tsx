@@ -101,7 +101,7 @@ const BlogDetails: React.FC = () => {
                 </div>
                 <div className='shadow-custom-light px-8 py-10 mt-10 rounded'>
                 <h1 className='capitalize text-secondary text-[28px] font-semibold mb-4'>Popular Tags</h1>
-                <div className='gap-3 flex flex-wrap'>
+                <div className='gap-3 flex justify-center flex-wrap'>
                  {
                     tags.map((tag,index)=> 
                          <button key={index} className='shadow-custom-light px-4 hover:border-2 hover:border-primary hover:text-primary py-2 leading-[160%] tex-[16px] font-medium capitalize'>

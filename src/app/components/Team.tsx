@@ -4,14 +4,18 @@ import SectionHeading from './shared/SectionHeading';
 import TeamCard from './card/TeamCard';
 
 const teams = [
-    { name: "Dianne Russell", role: "Gym Instructor" },
-    { name: "Jane Cooper", role: "Yoga Instructor" },
-    { name: "Kristin Watson", role: "Pilates Trainer" },
-    { name: "Wade Warren", role: "Bodybuilding Coach" },
-    { name: "Esther Howard", role: "Crossfit Instructor" },
-    { name: "Cody Fisher", role: "Personal Trainer" },
-    { name: "Savannah Nguyen", role: "Fitness Coach" },
-    { name: "Leslie Alexander", role: "Nutritionist" },
+    { _id: 1, name: "Dianne Russell", role: "Gym Instructor", image:'/images/Team/1.png' },
+    { _id: 2, name: "Jane Cooper", role: "Yoga Instructor" , image:'/images/Team/1.png' },
+    { _id: 3, name: "Kristin Watson", role: "Pilates Trainer" , image:'/images/Team/1.png' },
+    { _id: 4, name: "Wade Warren", role: "Bodybuilding Coach" , image:'/images/Team/1.png' },
+    { _id: 5, name: "Esther Howard", role: "Crossfit Instructor" , image:'/images/Team/1.png' },
+    { _id: 6, name: "Cody Fisher", role: "Personal Trainer" , image:'/images/Team/1.png' },
+    { _id: 7, name: "Savannah Nguyen", role: "Fitness Coach" , image:'/images/Team/1.png' },
+    { _id: 8, name: "Leslie Alexander", role: "Nutritionist" , image:'/images/Team/1.png' },
+    { _id: 9, name: "Esther Howard", role: "Crossfit Instructor" , image:'/images/Team/1.png' },
+    { _id: 10, name: "Cody Fisher", role: "Personal Trainer" , image:'/images/Team/1.png' },
+    { _id: 11, name: "Savannah Nguyen", role: "Fitness Coach" , image:'/images/Team/1.png' },
+    { _id: 12, name: "Leslie Alexander", role: "Nutritionist" , image:'/images/Team/1.png' },
 ];
 const Team: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,7 +72,7 @@ const Team: React.FC = () => {
                                 key={index}
                                 className="w-[100%] sm:w-[50%] md:w-[33%] lg:w-[25%] p-2 flex-shrink-0 transition-transform transform hover:scale-105 hover:z-10"
                             >
-                                <TeamCard name={team.name} role={team.role} />
+                                <TeamCard team = {team} />
                             </div>
                         ))}
                     </div>

@@ -165,3 +165,13 @@ line-height: 160%;
  border-color: none;
  box-shadow: none;
 }
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+  color: #fff;
+  border-color: #E67529;
+  background: #E67529;
+}
+
+:where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:focus, :where(.css-dev-only-do-not-override-qnu6hi).ant-input-outlined:focus-within {
+  border-color: #E67529;
+}

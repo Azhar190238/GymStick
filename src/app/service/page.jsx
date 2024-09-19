@@ -5,7 +5,7 @@ import Pricing from "../components/home2/Pricing";
 import Discount from "../components/Service/Discount";
 import Services from "../components/Service/Services";
 import BasicHeader from "../components/shared/BasicHeader";
-export default function About() {
+export default function Service() {
     return (
      <div>
       <BasicHeader heading="Service" subHeading="home"/>

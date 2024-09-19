@@ -8,10 +8,10 @@ import { CgGym } from "react-icons/cg";
 import { GrYoga } from "react-icons/gr";
 import { TbSwimming } from "react-icons/tb";
 import { FaHandRock } from "react-icons/fa";
-import Image from 'next/image';
 import BasicComponent from '../shared/BasicComponent';
 import { Pagination } from 'antd';
-import Link from 'next/link'; // Import Link from next/link
+import Link from 'next/link'; 
+import ServiceCard from '../card/ServiceCard';
 
 interface Service {
     icon: React.ElementType;
@@ -57,20 +57,7 @@ const Services: React.FC = () => {
             <div className='grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-8 md:mx-0'>
                 {displayedServices.map((service, index) => (
                     <Link href={'/classes'} key={index} passHref>
-                        <div className='hover:scale-105 transition-all duration-500 shadow-custom-light bg-white hover:bg-primary group rounded'>
-                            <div>
-                                <Image src={service.image} alt='service' width={424} height={230} />
-                            </div>
-                            <div className='relative bottom-8 mx-auto rounded-full w-16 bg-primary p-4 group-hover:bg-white'>
-                                <service.icon className='text-white text-3xl group-hover:text-primary' />
-                            </div>
-                            <h4 className='text-center service-heading group-hover:text-white text-[#2B2B2B] text-[18px] font-bold'>{service.title}</h4>
-                            <p className='text-center max-w-[296px] mx-auto mt-4 para-1 service-description group-hover:text-white'>{service.description}</p>
-                            <div className='mt-8 pb-8 flex space-x-2 items-center justify-center'>
-                                <p className='text-center service-description group-hover:text-white '>{service.button}</p>
-                                <service.iconRight className='text-xl group-hover:text-white' />
-                            </div>
-                        </div>
+                        <ServiceCard key={service.title} service ={service} />
                     </Link>
                 ))}
             </div>

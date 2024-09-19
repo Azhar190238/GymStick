@@ -10,14 +10,14 @@ interface PricingCardProps {
 const PricingCard: React.FC<PricingCardProps> = ({ name, price,  plan, deadLine }) => {
     return (
         <section className='hover:scale-105 transition-all duration-500 group  shadow-custom-light'>
-            <div>
-                <Image src='/images/pricing/1.png' width={424} height={270} alt='images'></Image>
-            </div>
+            
+                <Image src='/images/pricing/1.png' width={424} height={270} alt='images' className='md:max-w-[424px] w-full '></Image>
+        
             <div className='p-6'>
-                <div className=' font-montserrat text-[32px] font-bold text-secondary group-hover:text-primary capitalize '>{name} </div>
+                <h1 className=' font-montserrat text-2xl md:text-[32px] font-bold text-secondary group-hover:text-primary capitalize '>{name} </h1>
                 <p className='font-bold font-montserrat text-secondary group-hover:text-primary text-[32px]'>${price} / {deadLine}</p>
                 <div className='py-5 '>
-                    <ul className='text-[20px] font-normal capitalize list-none pl-4'>
+                    <ul className=' text-[16px] md:text-[20px] font-normal capitalize list-none pl-4'>
                         {plan.map((item, index) => (
                             <li key={index} className='relative before:content-[""] before:absolute before:left-[-10px] before:top-[50%] before:w-[4px] before:h-[4px] before:bg-black before:rounded-full'>
                                 {item}

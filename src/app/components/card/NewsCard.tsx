@@ -7,17 +7,19 @@ import Link from 'next/link';
 
 interface newsCardProps {
   heading: string;
+  image:string;
+  _id:number
 }
 
-const NewsCard: React.FC<newsCardProps> = ({ heading }) => {
+const NewsCard: React.FC<newsCardProps> = ({ heading, image, _id }) => {
   return (
 
     <div
       className="bg-white group p-6 rounded shadow-custom-light"
     >
-      <div className="w-full md:w-[376px]  h-[360px]">
+      <div className="w-full md:max-w-[400px]  h-[360px]">
         <Image
-          src="/images/News/1.png"
+          src={image}
           alt="news"
           width={376}
           height={360}
@@ -41,7 +43,7 @@ const NewsCard: React.FC<newsCardProps> = ({ heading }) => {
               03 sep, 2024
             </span>
           </div>
-          <Link href='/blogdetails'>
+          <Link href={`/blog/${_id}`} passHref> 
           <button className="flex gap-2 items-center group-hover:text-primary text-secondary duration-300 transition-all text-[14px] md:text-[16px] cursor-pointer">
             <span>Read More</span>
              <LiaLongArrowAltRightSolid className="text-xl" /> 

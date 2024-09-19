@@ -1,7 +1,7 @@
 import About from '../components/home3/About'
 import Hero2 from '../components/home2/Hero2';
 import BMI from '../components/BMI';
-export default function Home() {
+export default function Home3() {
     return (
      <div>
         <Hero2></Hero2>

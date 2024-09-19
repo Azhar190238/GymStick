@@ -11,7 +11,7 @@ const Discount: React.FC = () => {
             <div className="relative max-w-[1320px] mx-auto flex flex-col lg:flex-row gap-28 h-full px-6 py-10 lg:py-0 lg:px-0">
                 <div className='flex flex-row space-x-14'>
                     <Image
-                        className='max-h-[504px] max-w-[402px] mt-[70px]'
+                        className='max-h-[504px] hidden md:flex md:max-w-[402px] mt-[70px]'
                         src='/images/discount/2.png'
                         width={402}
                         height={504}
