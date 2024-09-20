@@ -12,7 +12,7 @@ const Brand: React.FC = () => {
   return (
     <div className='bg-[#31353D] mt-24'>
       <div className='max-w-[1320px] mx-auto'>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-between ml-10'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 justify-between items-center ml-10'>
           {brandImages.map((image, index) => (
             <Image key={index} src={image.src} width={100} height={74} alt={image.alt} />
           ))}
