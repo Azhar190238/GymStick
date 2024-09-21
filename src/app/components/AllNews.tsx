@@ -5,13 +5,38 @@ import NewsCard from './card/NewsCard';
 import Link from 'next/link';
 
 const allNews = [
-    { heading: "Best Oral weight lifting Tips You should Follow." },
-    { heading: "Effective Ways to Strengthen Your Core." },
-    { heading: "10 Healthiest Foods for Building Muscle." },
-    { heading: "The Benefits of Early Morning Workouts." },
-    { heading: "How to Stay Hydrated During Weight Lifting." },
-    { heading: "Top Exercises for Building Chest Muscles." },
-];
+    { 
+      _id: "1", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    },
+    { 
+      _id: "2", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    },
+    { 
+      _id: "3", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    },
+    { 
+      _id: "4", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    },
+    { 
+      _id: "5", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    },
+    { 
+      _id: "6", 
+      heading: "Best Oral Weight Lifting Tips You Should Follow", 
+      image: "/images/News/1.png" 
+    }
+  ];
+  
 
 const AllNews: React.FC = () => {
     const latestNews = allNews.slice(0, 3);
@@ -38,7 +63,7 @@ const AllNews: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
                 {latestNews.map((news, index) => (
-                    <NewsCard key={index} heading={news.heading} />
+                    <NewsCard key={index} heading={news.heading} image={news.image} _id ={news._id} />
                 ))}
             </div>
         </div>

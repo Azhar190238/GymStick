@@ -8,7 +8,7 @@ import Link from 'next/link';
 interface newsCardProps {
   heading: string;
   image:string;
-  _id:number
+  _id:string;
 }
 
 const NewsCard: React.FC<newsCardProps> = ({ heading, image, _id }) => {

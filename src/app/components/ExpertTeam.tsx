@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ExpartCard from './card/ExpartCard';
 
 const ExpertTeam: React.FC = () => {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [shareIconHoveredIndex, setShareIconHoveredIndex] = useState<number | null>(null); 
+
     const [itemsToShow, setItemsToShow] = useState(3);
     const banners = [
         {
@@ -82,17 +81,8 @@ const ExpertTeam: React.FC = () => {
                             key={index}
                             className={`flex-shrink-0 mr-0 md:mr-6 ${itemsToShow === 1 ? 'w-[100%]' : itemsToShow === 2 ? 'w-[50%]' : 'w-[31.8%]'
                                 }`}
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
                         >
-                            <ExpartCard
-                                title={banner.title}
-                                description={banner.description}
-                                hoveredIndex={hoveredIndex}
-                                shareIconHoveredIndex={shareIconHoveredIndex}
-                                setShareIconHoveredIndex={setShareIconHoveredIndex}
-                                index={index}
-                            />
+                            <ExpartCard banner ={banner}/>
                         </div>
                     ))}
                 </div>
