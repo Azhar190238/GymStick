@@ -9,7 +9,7 @@ interface BasicComponentProps {
 const BasicComponent: React.FC<BasicComponentProps> = ({ subHeading, heading }) => {
     return (
         <div className='space-y-6 mb-[20px] '>
-            <div className='flex  space-x-3'>
+            <div className='flex justify-center mx-auto  space-x-3'>
                 <Image src='/images/basicComponents/Icons.png' width={24} height={24} alt='icon'></Image>
                 <h1 className='subHeading font-montserrat'>{subHeading}</h1>
             </div>
