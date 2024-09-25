@@ -1,7 +1,6 @@
 import { Image } from 'antd';
 import Link from 'next/link';
 import React from 'react';
-import SectionHeading from '../shared/SectionHeading';
 import BasicComponent from '../shared/BasicComponent';
 
 const ImageContainer: React.FC<{ imgSrc: string; alt: string }> = ({ imgSrc, alt }) => (

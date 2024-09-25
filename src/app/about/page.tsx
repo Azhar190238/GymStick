@@ -5,6 +5,7 @@ import Welcome from "../components/About/Welcome";
 import ExpertTeam from "../components/ExpertTeam";
 import Pricing from "../components/home2/Pricing";
 import BasicHeader from "../components/shared/BasicHeader";
+import Marquee from "../components/About/Marquee";
 
 
 export default function About() {
@@ -13,6 +14,7 @@ export default function About() {
        <BasicHeader heading="About" subHeading="home"/>
        <Welcome/>
        <Brand/>
+       <Marquee></Marquee>
        <ExpertTeam/>
        <Pricing></Pricing>
        <BasicGoogleMap/>

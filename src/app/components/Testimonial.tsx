@@ -5,12 +5,13 @@ import React, { useEffect, useState } from 'react';
 
 const Testimonial = () => {
     const allReviews = [
-        { review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager"},
-        { review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager1"},
-        { review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager2"},
-        { review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager3"},
-        { review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager4"},
+        { _id: 1, review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager" },
+        { _id: 2, review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager1" },
+        { _id: 3, review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager2" },
+        { _id: 4, review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager3" },
+        { _id: 5, review: "I have been hiring people in this space for a number of years and I have never seen this level of the more profession. It really feels like you are working with a team that can I have been hiring people in this space for a number of years and I that can I have been hiring people in this space for a ", name: "Azhar", role: "Manager4" },
     ];
+    
     const [itemsToShow, setItemsToShow] = useState(2); 
     const [currentIndex, setCurrentIndex] = useState(0);
     const itemsCount = allReviews.length;
@@ -57,15 +58,13 @@ const Testimonial = () => {
                         className="flex transition-transform duration-300"
                         style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
                     >
-                        {allReviews.map((review, index) => (
+                        {allReviews.map((reviews, index) => (
                             <div
                                 key={index}
                                 className={`flex-shrink-0 ${itemsToShow === 1 ? 'w-full' : 'w-1/2'} px-4`} 
                             >
                                 <TestimonialCard
-                                    reviews={review.review}
-                                    name={review.name}
-                                    role={review.role}
+                                  reviews ={reviews}
                                 />
                             </div>
                         ))}

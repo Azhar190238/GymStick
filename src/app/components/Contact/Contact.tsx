@@ -5,11 +5,11 @@ import { LuMailCheck } from 'react-icons/lu';
 
 const Contact: React.FC = () => {
     return (
-        <div className='w-full bg-white'>
-            {/* Outer wrapper to constrain max-width to 1320px */}
-            <div className='max-w-[1320px] mx-auto flex flex-col lg:flex-row w-full'>
-                {/* First section: White background */}
-                <div className='w-full lg:w-1/2 bg-white py-12 px-6'>
+      
+           
+            <div className='max-w-[1320px] mx-auto '>
+                 <div className='flex flex-col lg:flex-row w-full gap-10 lg:gap-28'>
+                <div className='w-full lg:w-1/2  py-12 px-6'>
                     <h3 className="text-[48px] font-montserrat font-bold">
                         Contact
                     </h3>
@@ -34,9 +34,7 @@ const Contact: React.FC = () => {
                         <Image className='rounded max-w-[254px] max-h-[367px] mt-20' src='/images/contact/2.png' width={254} height={367} alt='image' />
                     </div>
                 </div>
-
-                {/* Second section: Black background */}
-                <div className='flex-1 text-white px-6 '>
+                <div className='w-full lg:w-1/2 text-white px-6 '>
                     <p className='font-bold text-[20px] capitalize'>Get In Touch</p>
                     <p className='mt-6 font-bold text-[32px] md:text-[48px] text-primary capitalize'>Join Today!</p>
                     <form className='max-w-[630px] mt-12'>
@@ -65,8 +63,8 @@ const Contact: React.FC = () => {
                         <button type="submit" className="button mt-12"> Submit </button>
                     </form>
                 </div>
+                </div>
             </div>
-        </div>
     );
 };
 

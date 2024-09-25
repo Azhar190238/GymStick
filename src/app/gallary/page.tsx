@@ -1,12 +1,12 @@
 
-import AllGalary from "../components/home3/AllGalary";
+import AllGallery from "../components/home3/AllGallery";
 import BasicHeader from "../components/shared/BasicHeader";
 
-export default function Gallary() {
+export default function Gallery() {
     return (
      <div >
        <BasicHeader heading="image gallery" subHeading="home"/>
-       <AllGalary/>
+       <AllGallery/>
         
         
 

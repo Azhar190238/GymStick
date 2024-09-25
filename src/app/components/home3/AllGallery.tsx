@@ -8,7 +8,7 @@ const ImageContainer: React.FC<{ bgSrc: string; imgSrc: string; alt: string }> =
     </div>
 );
 
-const AllGalary: React.FC = () => {
+const AllGallery: React.FC = () => {
     const images = [
         { bgSrc: '/images/Gallary/bg1.png', imgSrc: '/images/Gallary/1.png', alt: 'image1' },
         { bgSrc: '/images/Gallary/bg2.png', imgSrc: '/images/Gallary/2.png', alt: 'image2' },
@@ -49,4 +49,6 @@ const AllGalary: React.FC = () => {
     );
 };
 
-export default AllGalary;
+export default AllGallery;
+
+

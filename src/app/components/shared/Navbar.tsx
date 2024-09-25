@@ -14,7 +14,7 @@ const links = [
   { name: 'Service', path: '/service' },
   { name: 'Shop', path: '/shop' },
   { name: 'Blogs', path: '/blog' },
-  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'FAQ', href: '/faq' }, { name: 'Price Plan', href: '/allprice' } , { name: 'BMI', href: '/bmi' } , { name: 'Trainer', href: '/trainer' }] },
+  { name: 'More', dropdownItems: [{ name: 'Contact', href: '/contact' }, { name: 'FAQ', href: '/faq' }, { name: 'Price Plan', href: '/allprice' } , { name: 'BMI', href: '/bmi' } , { name: 'Trainer', href: '/trainer' },{ name: 'Our Testimonial', href: '/testimonial/1'},{ name: 'Terms & Conditions', href: '/term-condition' }, { name: 'Privacy Policy', href: '/policy' } ] },
 ];
 
 const Navbar: React.FC = () => {

@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
-import BasicHeader from "../components/shared/BasicHeader";
+import BasicHeader from "./components/shared/BasicHeader";
+// import BasicHeader from "../components/shared/BasicHeader";
 
 const Custom404:React.FC = () => {
   return (
