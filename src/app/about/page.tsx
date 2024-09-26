@@ -6,6 +6,8 @@ import ExpertTeam from "../components/ExpertTeam";
 import Pricing from "../components/home2/Pricing";
 import BasicHeader from "../components/shared/BasicHeader";
 import Marquee from "../components/About/Marquee";
+import SwiperSlider from "../components/About/SwiperSlider";
+import Hand from "../components/About/Hand";
 
 
 export default function About() {
@@ -18,5 +20,7 @@ export default function About() {
        <ExpertTeam/>
        <Pricing></Pricing>
        <BasicGoogleMap/>
+       <SwiperSlider></SwiperSlider>
+       <Hand/>
      </div>
     )}

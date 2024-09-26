@@ -7,6 +7,7 @@ export default function Gallery() {
      <div >
        <BasicHeader heading="image gallery" subHeading="home"/>
        <AllGallery/>
+   
         
         
 
