@@ -8,6 +8,7 @@ import BasicHeader from "../components/shared/BasicHeader";
 import Marquee from "../components/About/Marquee";
 import SwiperSlider from "../components/About/SwiperSlider";
 import Hand from "../components/About/Hand";
+import Slider from "../components/About/Slider";
 
 
 export default function About() {
@@ -21,6 +22,8 @@ export default function About() {
        <Pricing></Pricing>
        <BasicGoogleMap/>
        <SwiperSlider></SwiperSlider>
+       <Slider></Slider>
        <Hand/>
+       
      </div>
     )}

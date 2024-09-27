@@ -272,3 +272,119 @@ line-height: 160%;
 
 }
 }
+
+
+/* Horizontal lines */
+@keyframes horizontalLineLeftToRight {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0; /* Keep it at left: 0 to ensure it grows to the right */
+  }
+}
+
+@keyframes horizontalLineRightToLeft {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  100% {
+    width: 100%;
+    right: 0; /* Keep it at right: 0 to ensure it grows to the left */
+  }
+}
+
+/* Vertical lines */
+@keyframes verticalLineTopToBottom {
+  0% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0; /* Keep it at top: 0 to ensure it grows downward */
+  }
+}
+
+@keyframes verticalLineBottomToTop {
+  0% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0; /* Keep it at bottom: 0 to ensure it grows upward */
+  }
+}
+
+/* General container for the border box */
+.border-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.border-box::before,
+.border-box::after,
+.border-box .animated-border::before,
+.border-box .animated-border::after {
+  content: "";
+  position: absolute;
+  background-color: #38b2ac;
+  transition: all 0.8s ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Top horizontal border (grows left to right) */
+.border-box::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+}
+
+/* Bottom horizontal border (grows right to left) */
+.border-box::after {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 4px;
+}
+
+/* Left vertical border (grows top to bottom) */
+.border-box .animated-border::before {
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+}
+
+/* Right vertical border (grows bottom to top) */
+.border-box .animated-border::after {
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 0;
+}
+
+/* Trigger horizontal animations on hover */
+.border-box:hover::before {
+  animation: horizontalLineLeftToRight 1s forwards;
+}
+
+.border-box:hover::after {
+  animation: horizontalLineRightToLeft 1s forwards;
+}
+
+/* Trigger vertical animations on hover */
+.border-box:hover .animated-border::before {
+  animation: verticalLineTopToBottom 1s forwards;
+}
+
+.border-box:hover .animated-border::after {
+  animation: verticalLineBottomToTop 1s forwards;
+}
